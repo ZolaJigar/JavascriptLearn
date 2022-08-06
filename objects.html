@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h1>Aaj hum sikhege objects in javascript</h1>
+
+    <script>
+      // const course = {
+      //     lecture : 10 ,
+      //     section : 3 ,
+      //     title : "javascript" ,
+      //     notes : {
+      //         introduction : "Welcome to javascript course"
+      //     },
+      //     enroll(){
+      //     console.log("You are sucessfully enrollled");
+
+      // }
+      // }
+
+      // course.enroll();
+      // console.log(course.title);
+
+      // //How to add the property at run time in objects
+      // course.price = 999 ;
+      // console.log(course);
+
+      //Factory function
+      function createCourse(title) {
+        return {
+          title: title,
+          enroll() {
+            console.log("You are sucessfully enrollled");
+          }
+        }
+      }
+      const course = createCourse("Javascript");
+      course.enroll();
+      console.log(course);
+
+
+      //Constructor function
+
+      function Course(title){
+        this.title = title , 
+        this.enroll = function(){
+            console.log("you are sucessfully enrolled couse");
+        }
+      }
+      const course1 = new Course("javascript");
+      course1.enroll();
+
+    // //Delete keyword in javascript for deleting properties and variables 
+    
+    // // delete course.title ;
+
+    // //Adding function at run time as property of object
+    // course.checkEnrollment = function(){
+    //     console.log("Enrollment already checked by server");
+    // }
+    // console.log(course);
+
+    const course2 = new Course("javascript");
+    console.log(course2.constructor)
+    console.log(course1.constructor)
+
+
+    const course_1 = new Function('title' , `  this.title = title , 
+        this.enroll = function(){
+            console.log("you are sucessfully enrolled couse");
+        }`)
+      
+        const course_2 = new course_1("Java script");
+        course_2.enroll();
+    </script>
+  </body>
+</html>

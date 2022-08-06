@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pass by value and pass by reference </title>
+</head>
+<body>
+    <h1> Let's take one shot on pass by value and reference </h1>
+    <script>
+        //Primitive datatype
+        let number = 10 ;
+        //Pass by value
+        let number_2 = number ;
+        number = 13 ;
+
+        console.log(number) ;
+        console.log(number_2);
+
+        //Reference Datatype
+        let obj = {number : 10} ;
+        //Pass by reference
+        let obj2 = obj ;
+        
+        console.log(obj);
+        console.log(obj1);
+    </script> 
+</body>
+</html>

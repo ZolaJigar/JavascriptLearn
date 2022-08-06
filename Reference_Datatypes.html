@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Datatypes </title>
+</head>
+<body
+<h1> Aaj hum sikhege Reference Datatypes </h1>
+    <script>
+        //Objects 
+        // let animal = {
+        //     name : "Lion" ,
+        //     legs : 4 ,
+        //     eyes : 2
+        // };
+        // console.log(animal);
+
+        // console.log(animal.name);  //Dot notation
+        // console.log(animal["eyes"]); //Bracket notation
+        
+        // //When you have to use the bracket notation in your program of objects
+        // let eyesProps = "eyes" ;
+        // console.log(animal[eyesProps]);
+
+
+        // //Arrays
+        // let selectBooks = ["The Rudest book ever" , "Thin and grow rich" , "Silent Patient" , "Mrs. dollaway" , "Hey stranger i know how you feel"];
+        // // console.log(selectBooks);
+        // // console.log(selectBooks[0]);
+        // // console.log(selectBooks[8]);
+        // console.log(selectBooks.length);
+
+
+        // //Functions
+        // function namasateWorld(){
+        //     console.log("Namaste world");
+        // }
+        // namasateWorld();
+
+        // function printName(name)
+        // {
+        //     console.log("Namaste " + name);
+        // }
+        // printName("jigar");
+
+
+        function calculator(firstNumber , secondNumber)
+        {
+            let add = firstNumber + secondNumber ;
+            let sub = firstNumber - secondNumber ;
+            let mul = firstNumber * secondNumber ;
+            let div = firstNumber / secondNumber;
+
+            let choice = parseInt(prompt("Enter your choice"));
+
+            switch(choice){
+                case 0:
+                    console.log("Addition is " , add);
+                    break;
+                case 1:
+                    console.log("Subtraction is " ,sub);
+                    break;
+                case 2:
+                    console.log("Multiplication is " ,mul);
+                    break;
+                case 3:
+                    console.log("Division is " ,div);
+                    break;
+                default:
+                    console.log("wrong choice please choose between valid options");
+                    break ;
+            }
+        }
+
+        let fNumber = parseInt(prompt("Enter your first number :"));
+        let sNumber = parseInt(prompt("Enter your second number :"));
+
+        let result = calculator(fNumber , sNumber);
+        console.log(result);
+    </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String exercises</title>
+</head>
+<body>
+    <h2> Fixing capitalization </h2>
+    <div class="output">
+        <ul>
+
+        </ul>
+    </div>
+
+    <script>
+        const list = document.querySelector('output.ul');
+        list.innerHTML = '';
+        let cities = ["MunDRa" , "BhUJ" , "MuMBai" , "GanDHiNagar"];
+        
+        for(let i=0 ; i<cities.length ; i++)
+        {
+            let lowerCasecity = cities[i].toLowerCase();
+            let firstAlphabet = lowercasecity.slice(0,1);
+            let lowercasecity =  lowerCasecity.replace(firstAlphabet , firstAlphabet.toUpperCase());
+            let listItem = document.createElement('li');
+            listItem.textContent = lowerCasecity ;
+            list.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
